@@ -1,19 +1,19 @@
-html, body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
-  .header {
+.header {
     background-color: #24252A;
     color: white;
     padding: 20px;
     text-align: center;
   }
-  .navigation {
+.navigation {
     background-color: #000;
     overflow: hidden;
   }
-  .navigation a {
+.navigation a {
     float: left;
     display: block;
     color: white;
@@ -21,11 +21,11 @@ html, body {
     padding: 14px 16px;
     text-decoration: none;
   }
-  .resume {
+.resume {
     padding: 20px;
     background-color: #f4f4f4;
   }
-  .experience {
+.experience {
     background-color: #333;
     color: white;
     margin: 20px 0;
