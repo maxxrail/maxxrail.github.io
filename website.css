@@ -73,6 +73,12 @@ body {
     font-size: 2em;
 }
 
+.resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
