@@ -73,6 +73,14 @@ body {
     font-size: 2em;
 }
 
+.resume {
+    display: block;
+    width: 640px;
+    height:480px;
+    allow: autoplay;
+}
+    
+
 .contact-form {
     display: flex;
     flex-direction: column;
