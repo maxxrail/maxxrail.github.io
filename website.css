@@ -60,10 +60,14 @@ body {
 .header-content {
     max-width: 800px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-content .text-section {
-    margin-right: auto;
+    margin-right: 20px;
+    flex: 1;
 }
 
 .header-content h1 {
@@ -76,12 +80,12 @@ body {
     margin-bottom: 20px;
 }
 
-.social-links {
+.header-content .social-links {
     display: flex;
     gap: 10px;
 }
 
-.social-link {
+.header-content .social-link {
     padding: 10px 20px;
     background-color: #4c1482;
     border-radius: 5px;
@@ -90,8 +94,15 @@ body {
     transition: background-color 0.3s;
 }
 
-.social-link:hover {
+.header-content .social-link:hover {
     background-color: #2b1055;
+}
+
+.header-content .photo-section img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .section {
