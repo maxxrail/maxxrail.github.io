@@ -5,12 +5,13 @@ body {
     background: linear-gradient(135deg, #2b1055, #7597de);
     color: #f4f4f4;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    flex: 1;
 }
 
 .navigation {
@@ -23,6 +24,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .navigation .logo {
@@ -44,18 +46,20 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100vh;
-    padding: 0 20px;
+    width: 100%;
     background: linear-gradient(135deg, #2b1055, #7597de);
     color: white;
     text-align: left;
     position: relative;
-    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .header-content {
-    max-width: 600px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .header-content .text-section {
@@ -72,18 +76,22 @@ body {
     margin-bottom: 20px;
 }
 
-.header-content .learn-more {
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
     padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
+    background-color: #4c1482;
     border-radius: 5px;
     color: white;
-    cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
-.header-content .learn-more:hover {
-    background-color: #0056b3;
+.social-link:hover {
+    background-color: #2b1055;
 }
 
 .section {
@@ -103,10 +111,18 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.resume-container iframe {
+    margin: 0 auto;
+    display: block;
 }
 
 .contact-form label {
     margin-bottom: 5px;
+    display: block;
+    text-align: left;
 }
 
 .contact-form input, .contact-form textarea {
@@ -115,6 +131,7 @@ body {
     border: none;
     border-radius: 5px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-form button {
@@ -133,7 +150,6 @@ body {
 
 footer {
     text-align: center;
-    margin-top: 40px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
 }
