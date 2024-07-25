@@ -89,6 +89,10 @@ body {
     margin: 0 auto;
 }
 
+.contact-form label {
+    margin-bottom: 5px;
+}
+
 .contact-form input, .contact-form textarea {
     margin-bottom: 15px;
     padding: 10px;
