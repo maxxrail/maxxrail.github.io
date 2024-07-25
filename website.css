@@ -73,9 +73,10 @@ body {
     font-size: 2em;
 }
 
-.resume {
-    display: flex;
-    flex-direction: column;
+.section iframe {
+    display: block;
+    width: 640px;
+    height: 480px;
     allow: autoplay;
 }
     
