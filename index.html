@@ -23,8 +23,13 @@
 
   <div class="header" id="home">
     <div class="header-content">
-      <h1>I'm Maximillian Railton</h1>
-      <p>A Computer Engineering and AI Student at McGill University</p>
+      <div class="text-section">
+        <h1>I'm Maximillian Railton</h1>
+        <p>A Computer Engineering and AI Student at McGill University</p>
+      </div>
+      <div class="photo-section">
+        <img src="path-to-your-photo.jpg" alt="Maximillian Railton">
+      </div>
     </div>
   </div>
 
@@ -142,7 +147,35 @@
       }
     }
 
+    function createClouds() {
+      const cloudContainer = document.createElement('div');
+      cloudContainer.className = 'cloud-container';
+      document.body.appendChild(cloudContainer);
+      for (let i = 0; i < 5; i++) {
+        const cloud = document.createElement('div');
+        cloud.className = 'cloud';
+        cloud.style.left = `${Math.random() * 100}vw`;
+        cloud.style.animationDuration = `${20 + Math.random() * 10}s`;
+        cloudContainer.appendChild(cloud);
+      }
+    }
+
+    function createCars() {
+      const roadContainer = document.createElement('div');
+      roadContainer.className = 'road-container';
+      document.body.appendChild(roadContainer);
+      for (let i = 0; i < 3; i++) {
+        const car = document.createElement('div');
+        car.className = 'car';
+        car.style.left = `${Math.random() * 100}vw`;
+        car.style.animationDuration = `${10 + Math.random() * 5}s`;
+        roadContainer.appendChild(car);
+      }
+    }
+
     createBirds();
+    createClouds();
+    createCars();
   });
 </script>
 
