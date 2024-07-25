@@ -73,14 +73,6 @@ body {
     font-size: 2em;
 }
 
-.section iframe {
-    display: block;
-    width: 640px;
-    height: 480px;
-    allow: autoplay;
-}
-    
-
 .contact-form {
     display: flex;
     flex-direction: column;
