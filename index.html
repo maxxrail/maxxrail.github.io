@@ -116,6 +116,21 @@
       start: "top 80%",
       toggleActions: "play none none none"
     }});
+
+    function createBirds() {
+      const birdContainer = document.createElement('div');
+      birdContainer.className = 'bird-container';
+      document.body.appendChild(birdContainer);
+      for (let i = 0; i < 5; i++) {
+        const bird = document.createElement('div');
+        bird.className = 'bird';
+        bird.style.left = `${Math.random() * 100}vw`;
+        bird.style.animationDuration = `${5 + Math.random() * 5}s`;
+        birdContainer.appendChild(bird);
+      }
+    }
+
+    createBirds();
   });
 </script>
 
