@@ -26,14 +26,9 @@
       <div class="text-section">
         <h1>I'm Maximillian Railton</h1>
         <p>A Computer Engineering and AI Student at McGill University</p>
-      </div>
-      <div class="photo-section">
-        <img src="path-to-your-photo.jpg" alt="Maximillian Railton">
+        <button class="learn-more">Learn More</button>
       </div>
     </div>
-    <div class="cloud-container"></div>
-    <div class="road-container"></div>
-    <div class="rain-container"></div>
   </div>
 
   <div class="section" id="experience">
@@ -136,44 +131,6 @@
         toggleActions: "play none none none"
       }
     });
-
-    function createClouds() {
-      const cloudContainer = document.querySelector('.cloud-container');
-      for (let i = 0; i < 5; i++) {
-        const cloud = document.createElement('div');
-        cloud.className = 'cloud';
-        cloud.style.left = `${Math.random() * 100}vw`;
-        cloud.style.top = `${Math.random() * 30}vh`;
-        cloudContainer.appendChild(cloud);
-      }
-    }
-
-    function createCars() {
-      const roadContainer = document.querySelector('.road-container');
-      for (let i = 0; i < 3; i++) {
-        const car = document.createElement('img');
-        car.className = 'car';
-        car.src = 'path-to-car-image.png'; // Update with the actual path to your car image
-        car.style.animationDuration = `${10 + Math.random() * 5}s`;
-        roadContainer.appendChild(car);
-      }
-    }
-
-    function createRain() {
-      const rainContainer = document.querySelector('.rain-container');
-      for (let i = 0; i < 100; i++) {
-        const drop = document.createElement('div');
-        drop.className = 'rain-drop';
-        drop.style.left = `${Math.random() * 100}vw`;
-        drop.style.animationDuration = `${1 + Math.random()}s`;
-        drop.style.animationDelay = `${Math.random() * 1}s`;
-        rainContainer.appendChild(drop);
-      }
-    }
-
-    createClouds();
-    createCars();
-    createRain();
   });
 </script>
 
