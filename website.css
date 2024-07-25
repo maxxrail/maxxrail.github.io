@@ -74,9 +74,7 @@ body {
 }
 
 .resume {
-    display: block;
-    width: 640px;
-    height:480px;
+    display: flex;
     allow: autoplay;
 }
     
