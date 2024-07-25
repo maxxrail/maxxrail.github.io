@@ -108,13 +108,13 @@ footer {
     background-color: #000;
 }
 
-footer .social-media a, footer .footer-links a {
+footer .social-media a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s;
 }
 
-footer .social-media a:hover, footer .footer-links a:hover {
+footer .social-media a:hover {
     color: #007bff;
 }
