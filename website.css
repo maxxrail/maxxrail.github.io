@@ -53,7 +53,29 @@ body {
 }
 
 .header-content {
-    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.header-content .text-section {
+    max-width: 50%;
+    text-align: left;
+}
+
+.header-content .photo-section {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content img {
+    border-radius: 50%;
+    border: 5px solid darkgreen;
+    width: 150px;
+    height: 150px;
 }
 
 .header h1 {
@@ -179,7 +201,7 @@ body::before {
     }
 }
 
-.bird-container {
+.bird-container, .cloud-container, .road-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -189,14 +211,32 @@ body::before {
     overflow: hidden;
 }
 
-.bird {
+.bird, .cloud, .car {
     position: absolute;
     top: 10%;
     width: 50px;
     height: 30px;
     background: white;
-    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
     animation: fly linear infinite;
+}
+
+.bird {
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+}
+
+.cloud {
+    width: 100px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+}
+
+.car {
+    bottom: 10%;
+    width: 40px;
+    height: 20px;
+    background: red;
+    border-radius: 5px;
 }
 
 @keyframes fly {
@@ -205,5 +245,14 @@ body::before {
     }
     100% {
         transform: translateX(-100vw) translateY(10vh) scale(0.5);
+    }
+}
+
+@keyframes drive {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
     }
 }
