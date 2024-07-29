@@ -12,6 +12,8 @@ body {
 
 .container {
     flex: 1;
+    position: relative;
+    z-index: 2; /* Make sure it's above the fluid canvas */
 }
 
 #fluid-container {
@@ -21,7 +23,7 @@ body {
     width: 100%;
     height: 100vh;
     pointer-events: none; /* Make sure it doesn't interfere with other interactions */
-    z-index: -1; /* Ensure it is behind other elements */
+    z-index: 1; /* Ensure it is behind the container */
 }
 
 #renderSurface {
