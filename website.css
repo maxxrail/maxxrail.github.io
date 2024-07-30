@@ -173,7 +173,7 @@ body {
     margin: 0 auto;
     display: block;
     width: 100%;
-    height: auto;
+    height: 800px; /* Adjusted height */
 }
 
 .contact-form label {
