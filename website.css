@@ -149,6 +149,8 @@ body {
 .resume-container iframe {
     margin: 0 auto;
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .contact-form label {
@@ -255,5 +257,25 @@ footer .social-media a:hover {
 
     .section h2 {
         font-size: 1.5em;
+    }
+
+    /* Dropdown menu for mobile */
+    .navigation .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: white;
+        margin-left: auto;
+    }
+
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navigation ul.active {
+        display: flex;
     }
 }
