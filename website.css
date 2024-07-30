@@ -144,13 +144,46 @@ body {
 }
 
 .experience-item, .resume-container, .contact-form {
-    max-width: 90%; /* Adjusted max-width to ensure proper fit on smaller screens */
+    width: 90%; /* Default width for smaller screens */
+    max-width: 90%; /* Ensure they fit properly on smaller screens */
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .header-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .header-content .text-section {
+        margin-right: 20px;
+        flex: 1;
+    }
+
+    .header-content h1 {
+        font-size: 3em;
+    }
+
+    .header-content p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .experience-item, .resume-container, .contact-form {
+        width: 60%; /* Reduce width for larger screens */
+        max-width: 800px; /* Ensure max width is consistent */
+    }
 }
 
 .resume-container iframe {
@@ -205,29 +238,4 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #007bff;
-}
-
-@media (min-width: 768px) {
-    .header {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .header-content {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .header-content .text-section {
-        margin-right: 20px;
-        flex: 1;
-    }
-
-    .header-content h1 {
-        font-size: 3em;
-    }
-
-    .header-content p {
-        font-size: 1.5em;
-    }
 }
