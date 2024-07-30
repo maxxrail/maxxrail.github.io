@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#000000, #000000,#38aee6);
+    background: linear-gradient(#000000, #000000, #38aee6);
     color: #f4f4f4;
     overflow-x: hidden;
     min-height: 100vh;
@@ -13,7 +13,7 @@ body {
 .container {
     flex: 1;
     position: relative;
-    z-index: 2; /* Make sure it's above the fluid canvas */
+    z-index: 2;
 }
 
 .navigation {
@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color:  #38aee6;
+    background-color: #38aee6;
     position: fixed;
     top: 0;
     width: 100%;
@@ -62,45 +62,46 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Ensure it is behind the text and buttons */
+    z-index: 1;
 }
 
 .header-content {
     max-width: 800px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     position: relative;
-    z-index: 2; /* Ensure it is in front of the canvas */
+    z-index: 2;
 }
 
 .header-content .text-section {
-    margin-right: 20px;
-    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .header-content h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .header-content p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
 .header-content .btn-liquid {
     display: inline-block;
     position: relative;
-    width: 120px; /* Adjust width to make space between buttons */
+    width: 120px;
     height: 60px;
     margin: 10px;
     border-radius: 27px;
     font: 700 14px/60px "Arial", sans-serif;
     letter-spacing: 0.05em;
     text-align: center;
-    background: none; /* Remove white background */
+    background: none;
 }
 
 .header-content .btn-liquid .inner {
@@ -128,6 +129,8 @@ body {
 
 .section {
     margin: 80px 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .section h2 {
@@ -195,4 +198,24 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #007bff;
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .header-content .text-section {
+        margin-right: 20px;
+        flex: 1;
+    }
+
+    .header-content h1 {
+        font-size: 3em;
+    }
+
+    .header-content p {
+        font-size: 1.5em;
+    }
 }
