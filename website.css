@@ -38,8 +38,9 @@ body {
 .navigation a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     transition: color 0.3s;
+    font-size: 1em; /* Adjusted font size for better fit on mobile */
 }
 
 .navigation a:hover {
@@ -48,6 +49,7 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -55,6 +57,7 @@ body {
     position: relative;
     padding: 0 20px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 #blobcanvas {
@@ -75,7 +78,6 @@ body {
     gap: 20px;
     position: relative;
     z-index: 2;
-    text-align: center; /* Center align the text */
 }
 
 .header-content .text-section {
@@ -83,7 +85,7 @@ body {
 }
 
 .header-content h1 {
-    font-size: 2em; /* Adjusted font size */
+    font-size: 2em; /* Adjusted font size for better fit on mobile */
     margin-bottom: 20px;
 }
 
@@ -206,6 +208,11 @@ footer .social-media a:hover {
 }
 
 @media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        text-align: left;
+    }
+
     .header-content {
         flex-direction: row;
         text-align: left;
