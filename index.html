@@ -8,14 +8,13 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fluid-canvas@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+  <script src="https://codepen.io/Tibixx/pen/BbBxRG.js"></script>
+  <script src="blob.js"></script>
+  <script src="liquid-button.js"></script>
 </head>
 <body>
 
-<div id="fluid-container">
-  <canvas id="renderSurface"></canvas>
-</div>
 <div class="container">
   <div class="navigation">
     <div class="logo">Maximillian Railton</div>
@@ -27,13 +26,16 @@
   </div>
 
   <div class="header" id="home">
+    <canvas id="blobcanvas"></canvas>
     <div class="header-content">
       <div class="text-section">
         <h1>I'm Maximillian Railton</h1>
         <p>A Computer Engineering and AI Student at McGill University</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/maximillian-r-6a27a3138/" class="social-link">LinkedIn</a>
-          <a href="https://github.com/maxxrail" class="social-link">GitHub</a>
+        <div class="btn-liquid" id="btn-linkedin">
+          <a href="https://www.linkedin.com/in/maximillian-r-6a27a3138/" class="inner">LinkedIn</a>
+        </div>
+        <div class="btn-liquid" id="btn-github">
+          <a href="https://github.com/maxxrail" class="inner">GitHub</a>
         </div>
       </div>
       <div class="photo-section">
@@ -110,39 +112,6 @@
     </div>
   </footer>
 </div>
-  
-<script>
-    const canvas = document.getElementById('renderSurface');
-    const myFluid = new Fluid(canvas);
-    fluid.mapBehaviors({
-    sim_resolution: 128,
-    dye_resolution: 512,
-
-    paused: false,
-    embedded_dither: true,
-
-    dissipation: .97,
-    velocity: .98,
-    pressure: .8,
-    pressure_iteration: 20,
-    curl: 0,
-    emitter_size: 0.5,
-
-    render_shaders: true,
-    multi_color: true,
-
-    render_bloom: false,
-    bloom_iterations: 8,
-    bloom_resolution: 256,
-    intensity: 0.8,
-    threshold: 0.6,
-    soft_knee: 0.7,
-
-    background_color: { r: 15, g: 15, b: 15 },
-    transparent: false
-});
-    myFluid.activate();
- </script>
 
 <script>
   $(document).ready(function() {
